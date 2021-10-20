@@ -5,4 +5,4 @@ get_opsy() {    # 获取Linux发行版和内核
     [ -f /etc/lsb-release ] && awk -F'[="]+' '/DESCRIPTION/{print $2}' /etc/lsb-release && return
 }
 opsy=$(get_opsy)
-echo ${opsy}" kernel: "$(uname -r)
+echo ${opsy}" kernel "$(uname -r)
